@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://nx.dev/docs/reference/releases
+docs:
+  - https://nx.dev/docs/reference/releases
+  - https://nx.dev/docs/reference/deprecated
+  - https://github.com/nrwl/nx/releases
+versioning:
+  scheme: semver
+  current_major: 23
+  current: 23.1.0
+  cadence: >-
+    Major versions ship roughly every six months (typically April and October);
+    minor versions add features, patch versions carry security and bug fixes.
+lts:
+  policy_url: https://nx.dev/docs/reference/releases
+  summary: >-
+    The previous major version enters LTS immediately when a new major is released.
+    LTS versions receive security patches and critical fixes for ~12 months; total
+    support window is ~18 months per major version.
+deprecation:
+  policy_url: https://nx.dev/docs/reference/releases
+  deprecated_reference: https://nx.dev/docs/reference/deprecated
+  summary: >-
+    Deprecated features remain functional through one full major cycle and are
+    removed at a subsequent major release (e.g. deprecated in v21.1.0 -> removed in
+    v23.0.0). Automated migrations are provided via `nx migrate`.
+  sunset_header: false
+status_page: https://status.nx.app/
+status_page_provider: Atlassian Statuspage
+migrations:
+  tool: nx migrate
+  automated: true
+security_advisories:
+  - id: CVE-2025-36852
+    summary: >-
+      "CREEP" advisory affecting self-hosted remote cache packages
+      (@nx/s3-cache, @nx/gcs-cache, @nx/azure-cache, @nx/shared-fs-cache),
+      which are now deprecated.
+    source: https://nx.dev/docs/reference/deprecated/self-hosted-cache-packages

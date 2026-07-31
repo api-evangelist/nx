@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://nx.dev/pricing
+docs:
+  - https://nx.dev/pricing
+  - https://nx.dev/docs/reference/nx-cloud/credits-pricing
+product: Nx Cloud
+model: usage-based (credits) + per-contributor
+currency: USD
+plans:
+  - name: Hobby
+    price: "Free forever"
+    highlights:
+      - 50,000 monthly credits
+      - Up to 5 contributors
+      - Community support
+  - name: Team
+    price: "Starts at $0 (usage-based)"
+    highlights:
+      - Email support
+      - "$19 per additional contributor / month"
+      - "$5.50 per additional 10,000 credits"
+  - name: Enterprise
+    price: "Custom"
+    highlights:
+      - Conformance rules and circular-dependency detection
+      - Advanced security and self-hosting options
+      - Dedicated support
+plan_count: 3

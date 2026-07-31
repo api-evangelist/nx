@@ -1,0 +1,76 @@
+generated: '2026-07-20'
+method: searched
+source: https://nx.dev/docs/reference
+docs:
+  - https://nx.dev/docs/reference
+  - https://nx.dev/docs/reference/nx-cloud-cli
+name: Nx CLI
+binary: nx
+package: nx
+install:
+  - method: npm
+    command: npm install --save-dev nx
+  - method: npx
+    command: npx nx <command>
+  - method: global-npm
+    command: npm add --global nx
+  - method: homebrew
+    command: brew install nx
+  - method: chocolatey
+    command: choco install nx
+summary: >-
+  The nx CLI is the primary interface to the Nx monorepo platform — it runs and
+  orchestrates tasks with computation caching, computes the affected graph,
+  scaffolds code with generators, and manages workspace upgrades. A companion
+  nx-cloud CLI drives Nx Cloud CI (distributed task execution / remote caching).
+command_groups:
+  - group: Run tasks
+    commands:
+      - { name: run, summary: "Run a target for a project (nx run project:target)" }
+      - { name: run-many, summary: "Run a target across multiple projects" }
+      - { name: affected, summary: "Run a target only for projects affected by changes" }
+      - { name: exec, summary: "Run a command in the context of the Nx graph" }
+      - { name: watch, summary: "Watch for project/file changes and run commands" }
+  - group: Explore the graph
+    commands:
+      - { name: graph, summary: "Open an interactive project-graph / task-graph visualization" }
+      - { name: show, summary: "Show information about the workspace or a project (show projects / show project)" }
+      - { name: list, summary: "List installed Nx plugins and their capabilities" }
+      - { name: report, summary: "Print environment/version info for bug reports" }
+  - group: Generate code
+    commands:
+      - { name: generate, aliases: [g], summary: "Run a generator to scaffold/modify code" }
+      - { name: add, summary: "Install an Nx plugin and run its init generator" }
+      - { name: import, summary: "Import code from another repository into the workspace, preserving history" }
+  - group: Manage the workspace
+    commands:
+      - { name: init, summary: "Add Nx to an existing repository" }
+      - { name: migrate, summary: "Update Nx and dependencies and run migration scripts" }
+      - { name: sync, summary: "Run registered sync generators to keep the workspace consistent" }
+      - { name: release, summary: "Version, changelog, and publish projects (nx release)" }
+      - { name: format, aliases: ["format:check", "format:write"], summary: "Check or apply Prettier formatting across affected files" }
+      - { name: repair, summary: "Repair workspace configuration after manual changes" }
+      - { name: reset, summary: "Clear the Nx cache and stop the daemon" }
+      - { name: daemon, summary: "Manage the Nx background daemon" }
+  - group: Nx Cloud
+    commands:
+      - { name: connect, summary: "Connect the workspace to Nx Cloud" }
+      - { name: login, summary: "Authenticate the CLI to Nx Cloud" }
+      - { name: logout, summary: "Log out of Nx Cloud" }
+      - { name: view-logs, summary: "Open the last command run details in Nx Cloud" }
+  - group: Nx Cloud CI (nx-cloud binary)
+    binary: nx-cloud
+    commands:
+      - { name: start-ci-run, summary: "Begin a distributed CI run / DTE session" }
+      - { name: complete-ci-run, summary: "Finalize a distributed CI run" }
+      - { name: record, summary: "Record a non-Nx command's output into the CI run" }
+      - { name: start-agent, summary: "Start an Nx Agent to execute distributed tasks" }
+key_flows:
+  - name: Affected builds/tests
+    example: "nx affected -t build test lint"
+  - name: Interactive graph
+    example: "nx graph"
+  - name: Upgrade Nx and migrate
+    example: "nx migrate latest && nx migrate --run-migrations"
+  - name: Distributed CI
+    example: "npx nx-cloud start-ci-run --distribute-on='3 linux-medium-js'"

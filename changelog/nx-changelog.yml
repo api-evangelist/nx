@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/nrwl/nx/releases
+docs:
+  - https://github.com/nrwl/nx/releases
+  - https://nx.dev/docs/reference/releases
+scheme: semver
+current_version: 23.1.0
+channel: GitHub Releases
+notes: >-
+  Nx publishes dated, per-version release notes on GitHub Releases for the nx and
+  @nx/* packages. Majors land ~every six months (April/October); minors and patches
+  in between. This artifact records the changelog scheme and current version; the
+  live GitHub Releases page is the authoritative, dated source of individual entries.
+entries:
+  - version: "23.x"
+    channel: latest
+    date: "2026-04"
+    highlights:
+      - Current major release line (latest), captured at v23.1.0.
+    breaking: unknown
+  - version: "22.x"
+    channel: lts
+    highlights:
+      - Prior major, now in LTS (security patches + critical fixes).
+    breaking: unknown
+  - version: "21.x"
+    channel: lts
+    highlights:
+      - LTS; introduced database cache replacing legacy filesystem cache.
+    breaking: unknown

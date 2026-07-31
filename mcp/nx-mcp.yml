@@ -1,0 +1,54 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://nx.dev/docs/reference/nx-mcp
+docs:
+  - https://nx.dev/docs/reference/nx-mcp
+  - https://nx.dev/docs/getting-started/ai-setup
+server:
+  name: nx-mcp
+  official: true
+  vendor: Nrwl / Nx
+  transport: stdio
+  transports_available: [stdio, sse, http]
+  start_command: "npx nx mcp"
+  start_command_legacy: "npx nx-mcp@latest"
+  min_nx_version: "21.4"
+  setup_command: "npx nx configure-ai-agents"
+  description: >-
+    First-party Model Context Protocol server that gives AI coding assistants
+    deep, graph-aware context about an Nx workspace — project dependencies,
+    generators/plugins, live terminal output, and Nx Cloud CI status — plus the
+    ability to run generators and monitor/fix CI. Also integrated into Nx Console
+    (VS Code / JetBrains).
+tools:
+  - name: nx_docs
+    description: Retrieve relevant Nx documentation for a query.
+  - name: nx_available_plugins
+    description: List available Nx plugins and their capabilities.
+  - name: nx_current_running_tasks_details
+    description: Details of currently running Nx tasks.
+  - name: nx_current_running_task_output
+    description: Terminal output of a currently running task.
+  - name: nx_visualize_graph
+    description: Open/visualize the project or task graph.
+  - name: ci_information
+    description: Nx Cloud CI pipeline execution (CIPE) information.
+  - name: ci_task_output
+    description: Retrieve task output from an Nx Cloud CI run.
+  - name: update_self_healing_fix
+    description: Apply/approve an Nx Cloud self-healing CI fix.
+  - name: nx_workspace
+    description: Workspace configuration and project graph overview (extended, --no-minimal).
+  - name: nx_workspace_path
+    description: Resolve the workspace root path (extended, --no-minimal).
+  - name: nx_project_details
+    description: Detailed configuration for a specific project (extended, --no-minimal).
+  - name: nx_generators
+    description: List available generators (extended, --no-minimal).
+  - name: nx_generator_schema
+    description: Schema/options for a specific generator (extended, --no-minimal).
+notes: >-
+  A minimal tool set is exposed by default; the extended workspace/project/generator
+  tools require running the server with --no-minimal. Tool names captured verbatim
+  from the Nx MCP Server Reference.

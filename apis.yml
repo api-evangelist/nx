@@ -1,7 +1,33 @@
 aid: nx
 name: Nx
-description: Nx is a company surfaced as a portfolio company of a16z and added to the API Evangelist network
-  as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1
+description: >-
+  Nx is an open-source, technology-agnostic monorepo build platform from Nrwl
+  (backed by a16z) that speeds up builds and CI through computation caching, task
+  orchestration, and running only the projects affected by a change. Its developer
+  surface spans a local CLI (nx) with a large family of first-party @nx/* technology
+  plugins and code generators, an official Model Context Protocol server (nx-mcp) and
+  Nx Console editor integrations for AI-assisted development, and the hosted Nx Cloud
+  service for remote caching, distributed task execution (Nx Agents), and self-healing
+  CI. Nx is a build/CI tooling platform rather than a REST API provider — its integration
+  surface is the nx CLI, the @nx/* npm packages, the MCP server, and Nx Cloud.
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/nrwl.png
 url: https://raw.githubusercontent.com/api-evangelist/nx/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +37,90 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Build System
+- Monorepo
+- Developer Tools
+- CI/CD
+- Continuous Integration
+- Caching
+- Command Line Interface
+- Model Context Protocol
+- JavaScript
+- TypeScript
+- DevOps
 apis: []
+common:
+- type: DomainSecurity
+  url: security/nx-domain-security.yml
+- type: Website
+  name: Nx
+  url: https://nx.dev
+- type: DeveloperPortal
+  name: Nx Developer Portal
+  url: https://nx.dev
+- type: Documentation
+  name: Nx Documentation
+  url: https://nx.dev/docs
+- type: APIReference
+  name: Nx Reference (CLI, config, plugins)
+  url: https://nx.dev/docs/reference
+- type: GettingStarted
+  name: Getting Started with Nx
+  url: https://nx.dev/docs/getting-started
+- type: Support
+  name: Nx Community
+  url: https://nx.dev/community
+- type: Blog
+  name: Nx Blog
+  url: https://nx.dev/blog
+- type: GitHubOrganization
+  name: nrwl on GitHub
+  url: https://github.com/nrwl
+- type: Pricing
+  name: Nx Cloud Pricing
+  url: https://nx.dev/pricing
+- type: SignUp
+  name: Nx Cloud Sign Up
+  url: https://cloud.nx.app/
+- type: TermsOfService
+  name: Nx Cloud Terms
+  url: https://cloud.nx.app/terms
+- type: PrivacyPolicy
+  name: Nx Cloud Privacy Policy
+  url: https://cloud.nx.app/privacy
+- type: StatusPage
+  name: Nx Status
+  url: https://status.nx.app/
+- type: Packages
+  name: Nx npm packages
+  url: packages/nx-packages.yml
+- type: SDKs
+  name: Nx first-party npm packages (@nx/*)
+  url: packages/nx-packages.yml
+- type: CLI
+  name: Nx CLI
+  url: cli/nx-cli.yml
+- type: MCPServer
+  name: Nx MCP Server (nx-mcp)
+  url: mcp/nx-mcp.yml
+- type: LLMsTxt
+  name: Nx llms.txt
+  url: llms/nx-llms.txt
+- type: ChangeLog
+  name: Nx Changelog (GitHub Releases)
+  url: changelog/nx-changelog.yml
+- type: Lifecycle
+  name: Nx Release & Support Policy
+  url: lifecycle/nx-lifecycle.yml
+- type: Deprecation
+  name: Nx Deprecation Policy
+  url: https://nx.dev/docs/reference/releases
+- type: Plans
+  name: Nx Cloud Plans
+  url: plans/nx-plans.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
